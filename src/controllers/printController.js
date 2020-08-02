@@ -1,12 +1,8 @@
 const puppeteer = require('puppeteer')
-const findRemoveSync = require('find-remove')
 
 module.exports = {
     async create(request, response){
-        const { pageUrl } = request.body
-        const now = Date.now()
-        const pathBackend = `${__dirname}/../../../frontend/public/print/${ now }.png`;
-
+        const { pageUrl } = request.body;
         
         (async () => {
             const browser = await puppeteer.launch();
