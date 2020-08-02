@@ -2,9 +2,8 @@ const puppeteer = require('puppeteer')
 
 module.exports = {
     async create(request, response){
-        const { pageUrl } = request.body
-        const now = Date.now()
-
+        const { pageUrl } = request.body;
+        
         (async () => {
             const browser = await puppeteer.launch();
             const page = await browser.newPage();
