@@ -11,12 +11,12 @@ module.exports = {
             await page.goto(pageUrl);
             await page.setViewport({ width: 1000, height: 1000});
             const screenshot = await page.screenshot({ encoding: 'base64', fullPage: true });
-	    response.writeHead(200, {
-            	'Content-Type': 'image/png',
-        	'Content-Length': screenshot.length,
-                "Access-Control-Allow-Origin": "http://langiframe.herokuapp.com/",
-                "Access-Control-Allow-Methods": 'POST',
-    	    });
+	    //response.writeHead(200, {
+            //	'Content-Type': 'image/png',
+            //	'Content-Length': screenshot.length,
+            //    "Access-Control-Allow-Origin": "http://langiframe.herokuapp.com/",
+            //    "Access-Control-Allow-Methods": 'POST',
+    	    //});
             response.json({ screenshot });
 
             await browser.close();
