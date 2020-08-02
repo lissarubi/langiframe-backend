@@ -13,10 +13,7 @@ module.exports = {
           log: (...args) => result += (util.format(...args) + '\n'),
         };
         const context = vm.createContext({console: cons});
-       
-        res.header("Access-Control-Allow-Origin", "*");
-        res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
-
+               
         try {
           vm.runInContext(code, context);
           response.json({ result, error: false })

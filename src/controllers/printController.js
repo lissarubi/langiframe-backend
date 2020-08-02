@@ -14,8 +14,8 @@ module.exports = {
 	    response.writeHead(200, {
             	'Content-Type': 'image/png',
         	'Content-Length': screenshot.length,
-                "Access-Control-Allow-Origin", "http://langiframe.herokuapp.com/",
-                "Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE',
+                //"Access-Control-Allow-Origin": "http://langiframe.herokuapp.com/",
+                //"Access-Control-Allow-Methods": 'GET,PUT,POST,DELETE',
     	    });
             response.json({ screenshot });
 
